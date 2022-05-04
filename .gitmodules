@@ -1,0 +1,3 @@
+[submodule "AggregatorService/Service_1"]
+	path = AggregatorService/Service_1
+	url = https://github.com/voncha90/Service_1.git
