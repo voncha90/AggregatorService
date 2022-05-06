@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Service_1;
+//using Service_1;
 
 namespace AggregatorService.Controllers
 {
@@ -14,6 +16,11 @@ namespace AggregatorService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            var service1 = new Service1NewtonTest();
+            service1.Serialize(null);
+            var service2 = new Service_2.NewtonTest();
+            service2.Deserialize("");
+
             return new string[] { "value1", "value2" };
         }
 

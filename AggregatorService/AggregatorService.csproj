@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -6,8 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Service_1\**" />
+    <Compile Remove="Service_2\**" />
+    <Content Remove="Service_1\**" />
+    <Content Remove="Service_2\**" />
+    <EmbeddedResource Remove="Service_1\**" />
+    <EmbeddedResource Remove="Service_2\**" />
+    <None Remove="Service_1\**" />
+    <None Remove="Service_2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Service_1\Service_1\Service_1.csproj" />
+    <ProjectReference Include="Service_2\Service_2\Service_2.csproj" />
   </ItemGroup>
 
 </Project>
