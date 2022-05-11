@@ -28,7 +28,7 @@ namespace AggregatorService.Controllers
 
             Console.WriteLine(serviceBobjResult);
 
-            return new string[] { "value1", "value2" };
+            return new string[] { result, serviceBobjResult };
         }
 
         // GET api/values/5
